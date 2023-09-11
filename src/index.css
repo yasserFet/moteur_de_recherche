@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.bg_gre  {
+background: rgb(255,202,6);
+background: linear-gradient(331deg, rgba(255,202,6,1) 48%, rgba(219,215,169,1) 100%);
+}
+.search_bg_ri {
+background: rgb(88,209,255);
+background: linear-gradient(331deg, rgba(88,209,255,1) 23%, rgba(23,24,194,1) 100%);
+}
