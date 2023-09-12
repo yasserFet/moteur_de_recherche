@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 export default function Upload() {
   const [data,setData] = useState([])
+    const [isHovered, setIsHovered] = useState(false);
   console.log(data)
   const handelSubmit = (e)=> {
     setData(Array.from(e.target.files));
@@ -10,7 +11,13 @@ export default function Upload() {
     e.preventDefault()
     setData(data.filter((file) => file.name !== name));
   };
-  
+   const handleMouseEnter = () => {
+     setIsHovered(true);
+   };
+
+   const handleMouseLeave = () => {
+     setIsHovered(false);
+   };
 
 
   const handelClick = (e) => {
@@ -24,7 +31,7 @@ export default function Upload() {
             <div className="mb-6 pt-4">
               <label className="mb-5 block text-xl font-semibold text-[#07074D]">
                 Upload File with{" "}
-                <span className="text-blue-400 ">word2vec</span>
+                <span className="text-blue-700 ">word2vec</span>
               </label>
 
               <div className="mb-8">
@@ -101,7 +108,7 @@ export default function Upload() {
             <div>
               <button
                 onClick={handelClick}
-                className="hover:shadow-form w-full rounded-md search_bg_ri py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className={`  w-full rounded-md   py-3 px-8 text-center hover_state text-base font-semibold text-white outline-none`}
               >
                 Send File
               </button>

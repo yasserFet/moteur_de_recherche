@@ -21,7 +21,7 @@ export default function UploadBart() {
           <form className="py-6 px-9">
             <div className="mb-6 pt-4">
               <label className="mb-5 block text-xl font-semibold text-[#07074D]">
-                Upload File with <span className="text-blue-400 ">Bert</span>
+                Upload File with <span className="text-blue-700 ">Bert</span>
               </label>
 
               <div className="mb-8">
@@ -98,7 +98,7 @@ export default function UploadBart() {
             <div>
               <button
                 onClick={handelClick}
-                className="hover:shadow-form w-full rounded-md search_bg_ri py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className={`  w-full rounded-md   py-3 px-8 text-center hover_state text-base font-semibold text-white outline-none`}
               >
                 Send File
               </button>

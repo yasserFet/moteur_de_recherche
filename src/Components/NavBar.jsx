@@ -3,17 +3,20 @@ import Logo from "../assets/sonatrach.png"
 
 export default function NavBar() {
   return (
-    <nav className="p-4 bg-[#F5F7FB]">
+    <nav className="px-4 py-3  bg-[#F5F7FB]">
       <div className="container m-auto flex justify-between items-center">
-        <Link to="/" className="w-8 ">
-          <img className="w-full" src={Logo} alt="" />
-        </Link>
+        <div className="flex gap-3 items-center">
+          <Link to="/" className="w-6 ">
+            <img className="w-full" src={Logo} alt="" />
+          </Link>
+          <h1 className="font-bold text-xl">sonatrach</h1>
+        </div>
         <ul className="flex gap-5">
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "font-extrabold text-md text-indigo-500"
-                : "text-md font-semibold "
+                ? "font-extrabold text-md  bg-slate-900 py-2 px-6 text-white hover:bg-blue-700 rounded-xl hover:rounded-3xl transition "
+                : "text-md font-semibold bg-blue-500 py-2 px-6 text-white hover:bg-blue-700 rounded-xl hover:rounded-3xl transition  "
             }
             to="/UploadBart"
           >
@@ -22,8 +25,8 @@ export default function NavBar() {
           <NavLink
             className={({ isActive }) =>
               isActive
-                ? "font-extrabold text-md text-indigo-500"
-                : "text-md font-semibold "
+                ? "font-extrabold text-md  bg-slate-900 py-2 px-6 text-white hover:bg-blue-700 rounded-xl hover:rounded-3xl transition"
+                : "text-md font-semibold  bg-blue-500 py-2 px-6 text-white hover:bg-blue-700 rounded-xl hover:rounded-3xl transition "
             }
             to="/"
           >
@@ -33,8 +36,8 @@ export default function NavBar() {
             to="/Search"
             className={({ isActive }) =>
               isActive
-                ? "font-extrabold text-md text-indigo-500"
-                : "text-md font-semibold "
+                ? "font-extrabold text-md bg-slate-900  py-2 px-6 text-white hover:bg-blue-700 rounded-xl hover:rounded-3xl transition"
+                : "text-md font-semibold  bg-blue-500 py-2 px-6 text-white hover:bg-blue-700 rounded-xl hover:rounded-3xl transition"
             }
           >
             Search

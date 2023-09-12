@@ -28,7 +28,7 @@ export default function Search() {
                 </select>
                 <button
                   onClick={hanedlCancel}
-                  className="bg-indigo-500 hidden sm:flex text-white text-base rounded-lg px-4 py-2 font-thin"
+                  className="bg-indigo-500 hover:bg-slate-800 font-semibold hover:rounded-xl border  transition duration-400 hidden sm:flex text-white text-base rounded-lg px-4 py-2 "
                 >
                   Search
                 </button>
